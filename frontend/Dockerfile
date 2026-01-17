@@ -1,6 +1,6 @@
 # ============================================
 # Multi-stage Dockerfile for React Frontend
-# Production-ready with Nginx
+# Production-ready with HTTP server for Nginx reverse proxy
 # ============================================
 
 # Stage 1: Build - Create production build
@@ -28,51 +28,34 @@ ENV VITE_API_URL=${VITE_API_URL:-http://localhost:8000/api/v1}
 # Build the application
 RUN npm run build || bun run build
 
-# Stage 2: Production - Nginx to serve static files
-FROM nginx:alpine
+# Stage 2: Production - HTTP server to serve static files (for Nginx reverse proxy)
+FROM node:20-alpine AS runner
 
-# Create nginx configuration for frontend
-RUN cat > /etc/nginx/conf.d/default.conf <<'EOF'
-server {
-    listen 80;
-    server_name _;
-    root /usr/share/nginx/html;
-    index index.html;
+WORKDIR /app
 
-    # Gzip compression
-    gzip on;
-    gzip_vary on;
-    gzip_min_length 1024;
-    gzip_types text/plain text/css text/xml text/javascript application/x-javascript application/xml+rss application/json application/javascript;
+ENV NODE_ENV=production
+ENV PORT=3000
+ENV HOSTNAME=0.0.0.0
 
-    # Security headers
-    add_header X-Frame-Options "SAMEORIGIN" always;
-    add_header X-Content-Type-Options "nosniff" always;
-    add_header X-XSS-Protection "1; mode=block" always;
-
-    # SPA routing - all routes go to index.html
-    location / {
-        try_files $uri $uri/ /index.html;
-    }
-
-    # Cache static assets
-    location ~* \.(js|css|png|jpg|jpeg|gif|ico|svg|woff|woff2|ttf|eot)$ {
-        expires 1y;
-        add_header Cache-Control "public, immutable";
-    }
-}
-EOF
+# Install serve package to serve static files
+RUN npm install -g serve
 
 # Copy built files from builder stage
-COPY --from=builder /app/dist /usr/share/nginx/html
+COPY --from=builder /app/dist ./dist
 
-# Expose port
-EXPOSE 80
+# Create non-root user
+RUN addgroup --system --gid 1001 nodejs \
+  && adduser --system --uid 1001 nextjs \
+  && chown -R nextjs:nodejs /app
+
+USER nextjs
+
+# Expose port 3000 (will be proxied by Nginx on port 3008)
+EXPOSE 3000
 
 # Health check
 HEALTHCHECK --interval=30s --timeout=3s --start-period=5s --retries=3 \
-    CMD wget --no-verbose --tries=1 --spider http://localhost/ || exit 1
+  CMD wget --no-verbose --tries=1 --spider http://localhost:3000/ || exit 1
 
-# Start nginx
-CMD ["nginx", "-g", "daemon off;"]
-
+# Start serve to serve static files
+CMD ["serve", "-s", "dist", "-l", "3000"]
