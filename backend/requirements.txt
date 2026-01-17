@@ -1,0 +1,35 @@
+# Advanced Security Platform - Dependencies
+# Production-ready security scanning with OWASP ZAP integration
+
+# HTTP requests library
+requests>=2.31.0
+
+# SendGrid email alerts
+sendgrid>=6.10.0
+
+# FastAPI and web framework
+fastapi>=0.104.1
+uvicorn[standard]>=0.24.0
+python-multipart>=0.0.6
+pydantic>=2.5.0
+pydantic-settings>=2.1.0
+
+# Database
+sqlalchemy>=2.0.23
+psycopg2-binary>=2.9.9
+alembic>=1.12.1
+
+# Environment variables
+python-dotenv>=1.0.0
+
+# Authentication
+python-jose[cryptography]>=3.3.0
+passlib[bcrypt]>=1.7.4
+
+# OWASP ZAP integration
+python-owasp-zap-v2.4>=0.0.14
+
+# Note: Standard library modules used (no installation required):
+# - json, time, sys, os, ssl, socket
+# - datetime, pathlib, typing, urllib.parse
+

@@ -1,0 +1,90 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environment
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Logs
+*.log
+logs/
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# Documentation
+*.md
+!README.md
+docs/
+
+# Docker
+docker-compose.yml
+Dockerfile
+.dockerignore
+
+# Migration files (keep these, just ignore temp files)
+alembic/versions/__pycache__/
+
+# Reports and temporary files
+*.html
+*.json
+security_report_*.html
+security_report_*.json
+security-badge.html
+security-page.html
+status_page.html
+
+# Scripts and temp files
+*.sh
+*.txt
+!requirements.txt
+websites.txt
+
+# Git
+.git/
+.gitignore
+

@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Security & Reliability - Advanced Security Platform</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            background: #f5f7fa;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .header h1 {
+            font-size: 3em;
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+        
+        .header p {
+            font-size: 1.3em;
+            color: #7f8c8d;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .intro {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            margin-bottom: 40px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .intro p {
+            font-size: 1.1em;
+            line-height: 1.8;
+            color: #34495e;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .feature-card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+        
+        .feature-card h3 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 1.4em;
+        }
+        
+        .feature-card .icon {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+        }
+        
+        .feature-card ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .feature-card ul li {
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+        
+        .feature-card ul li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #27ae60;
+            font-weight: bold;
+        }
+        
+        .process-section {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            margin-bottom: 40px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .process-section h2 {
+            color: #2c3e50;
+            margin-bottom: 30px;
+            font-size: 2em;
+        }
+        
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .process-step {
+            padding: 20px;
+            background: #ecf0f1;
+            border-radius: 8px;
+            border-left: 4px solid #3498db;
+        }
+        
+        .process-step h4 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        
+        .process-step p {
+            color: #7f8c8d;
+            font-size: 0.95em;
+        }
+        
+        .badge-section {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 10px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .badge-section h2 {
+            margin-bottom: 20px;
+        }
+        
+        .badge-section p {
+            font-size: 1.1em;
+            opacity: 0.9;
+            margin-bottom: 30px;
+        }
+        
+        .security-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 15px 30px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 8px;
+            font-size: 1.1em;
+        }
+        
+        .contact-section {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .contact-section h2 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+        
+        .contact-section p {
+            color: #34495e;
+            margin-bottom: 15px;
+        }
+        
+        .contact-section a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        
+        .contact-section a:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2em;
+            }
+            
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🔒 Security & Reliability</h1>
+            <p>All our platforms are continuously monitored using automated OWASP Top-10 aligned security scanning, with audit-ready reporting and alerting.</p>
+        </div>
+        
+        <div class="intro">
+            <p>
+                Our security program implements enterprise-grade controls including continuous automated scanning, OWASP Top-10 aligned vulnerability detection, and comprehensive audit-ready reporting across all platforms. Security findings are actively monitored, tracked, and reviewed with responsible disclosure support.
+            </p>
+        </div>
+        
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="icon">🔐</div>
+                <h3>HTTPS & TLS Encryption</h3>
+                <ul>
+                    <li>HTTPS enforced across all platforms</li>
+                    <li>TLS version validation</li>
+                    <li>Certificate expiry monitoring</li>
+                    <li>Weak cipher detection</li>
+                </ul>
+            </div>
+            
+            <div class="feature-card">
+                <div class="icon">🛡️</div>
+                <h3>Secure HTTP Headers</h3>
+                <ul>
+                    <li>Content-Security-Policy (CSP)</li>
+                    <li>Strict-Transport-Security (HSTS)</li>
+                    <li>X-Frame-Options</li>
+                    <li>X-Content-Type-Options</li>
+                    <li>X-XSS-Protection</li>
+                    <li>Referrer-Policy</li>
+                </ul>
+            </div>
+            
+            <div class="feature-card">
+                <div class="icon">🔍</div>
+                <h3>OWASP Top-10 Aligned</h3>
+                <ul>
+                    <li>Automated security scanning</li>
+                    <li>Vulnerability detection</li>
+                    <li>Risk categorization</li>
+                    <li>OWASP ZAP integration</li>
+                </ul>
+            </div>
+            
+            <div class="feature-card">
+                <div class="icon">📊</div>
+                <h3>Continuous Monitoring</h3>
+                <ul>
+                    <li>Regular vulnerability detection</li>
+                    <li>Remediation tracking</li>
+                    <li>Multi-environment coverage</li>
+                    <li>Automated alerts</li>
+                </ul>
+            </div>
+            
+            <div class="feature-card">
+                <div class="icon">📋</div>
+                <h3>Audit & Reporting</h3>
+                <ul>
+                    <li>Security reports generated</li>
+                    <li>Issue tracking & status</li>
+                    <li>Historical scan data</li>
+                    <li>Compliance documentation</li>
+                </ul>
+            </div>
+            
+            <div class="feature-card">
+                <div class="icon">🤝</div>
+                <h3>Responsible Disclosure</h3>
+                <ul>
+                    <li>Security contact defined</li>
+                    <li>Reporting guidelines</li>
+                    <li>Vulnerability handling process</li>
+                    <li>Coordinated disclosure support</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="process-section">
+            <h2>Our Security Process</h2>
+            <div class="process-steps">
+                <div class="process-step">
+                    <h4>1. Automated Scanning</h4>
+                    <p>Regular automated scans using OWASP-aligned tools detect vulnerabilities across all platforms.</p>
+                </div>
+                <div class="process-step">
+                    <h4>2. Risk Assessment</h4>
+                    <p>Findings are categorized by severity (HIGH/MEDIUM/LOW) and prioritized for remediation.</p>
+                </div>
+                <div class="process-step">
+                    <h4>3. Alerting & Tracking</h4>
+                    <p>High-priority issues trigger immediate alerts. All issues are tracked until resolution.</p>
+                </div>
+                <div class="process-step">
+                    <h4>4. Remediation</h4>
+                    <p>Security team reviews and addresses findings with documented resolution tracking.</p>
+                </div>
+                <div class="process-step">
+                    <h4>5. Verification</h4>
+                    <p>Re-scans verify fixes and ensure issues are properly resolved.</p>
+                </div>
+                <div class="process-step">
+                    <h4>6. Reporting</h4>
+                    <p>Audit-ready reports document security posture for compliance and review.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="badge-section">
+            <h2>Security Compliance</h2>
+            <p>Our security program follows industry standards and best practices</p>
+            <div class="security-badge">
+                <span>🔒</span>
+                <span>
+                    <strong>OWASP-Aligned</strong><br>
+                    <small>Continuously Monitored</small>
+                </span>
+            </div>
+        </div>
+        
+        <div class="contact-section">
+            <h2>Report a Security Issue</h2>
+            <p>
+                We take security seriously. If you discover a security vulnerability, please report it responsibly.
+            </p>
+            <p>
+                <strong>Security Contact:</strong> <a href="mailto:security@yourdomain.com">security@yourdomain.com</a>
+            </p>
+            <p>
+                Please include:
+            </p>
+            <ul style="margin-left: 20px; margin-top: 10px;">
+                <li>Description of the vulnerability</li>
+                <li>Steps to reproduce</li>
+                <li>Potential impact</li>
+                <li>Suggested fix (if available)</li>
+            </ul>
+            <p style="margin-top: 20px; font-size: 0.9em; color: #7f8c8d;">
+                We will acknowledge receipt within 48 hours and provide updates on our investigation and remediation progress.
+            </p>
+        </div>
+    </div>
+</body>
+</html>
+

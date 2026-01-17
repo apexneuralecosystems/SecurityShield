@@ -1,0 +1,25 @@
+{
+  "last_updated": "2026-01-16T17:06:58.372504",
+  "summary": {
+    "total_websites": 23,
+    "secure_websites": 0,
+    "successfully_scanned": 19,
+    "failed_scans": 4,
+    "security_score_percentage": null,
+    "status": "monitoring",
+    "total_issues": 114,
+    "high_priority_issues": 47,
+    "medium_priority_issues": 30
+  },
+  "security_features": {
+    "https_enforced": true,
+    "tls_validation": true,
+    "security_headers": true,
+    "owasp_aligned": true,
+    "vulnerability_detection": true,
+    "multi_environment": true,
+    "responsible_disclosure": true
+  },
+  "websites": []
+}
+

@@ -1,0 +1,213 @@
+{
+  "last_updated": "2026-01-16T17:06:58.372504",
+  "summary": {
+    "total_websites": 23,
+    "secure_websites": 0,
+    "successfully_scanned": 19,
+    "failed_scans": 4,
+    "security_score_percentage": 0.0,
+    "status": "needs_improvement",
+    "total_issues": 114,
+    "high_priority_issues": 47,
+    "medium_priority_issues": 30
+  },
+  "security_features": {
+    "https_enforced": true,
+    "tls_validation": true,
+    "security_headers": true,
+    "owasp_aligned": true,
+    "vulnerability_detection": true,
+    "multi_environment": true,
+    "responsible_disclosure": true
+  },
+  "websites": [
+    {
+      "url": "https://kutum.apexneural.cloud/",
+      "status": "needs_attention",
+      "issue_count": 8,
+      "high_issues": 3,
+      "medium_issues": 3,
+      "last_scan": "2026-01-16T17:06:45.147439"
+    },
+    {
+      "url": "https://galactictherapeutics.com",
+      "status": "needs_attention",
+      "issue_count": 4,
+      "high_issues": 2,
+      "medium_issues": 0,
+      "last_scan": "2026-01-16T17:06:47.463122"
+    },
+    {
+      "url": "https://sportsai.apexneural.cloud/",
+      "status": "needs_attention",
+      "issue_count": 5,
+      "high_issues": 2,
+      "medium_issues": 1,
+      "last_scan": "2026-01-16T17:06:48.360507"
+    },
+    {
+      "url": "https://e2e-qa.apexneural.cloud",
+      "status": "scan_failed",
+      "issue_count": 0,
+      "high_issues": 0,
+      "medium_issues": 0,
+      "last_scan": "",
+      "error": "HTTPSConnectionPool(host='e2e-qa.apexneural.cloud', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='e2e-qa.apexneural.cloud', port=443): Failed to resolve 'e2e-qa.apexneural.cloud' ([Errno 8] nodename nor servname provided, or not known)\"))"
+    },
+    {
+      "url": "triverseacademy.apexneural.cloud",
+      "status": "scan_failed",
+      "issue_count": 0,
+      "high_issues": 0,
+      "medium_issues": 0,
+      "last_scan": "",
+      "error": "Invalid URL 'triverseacademy.apexneural.cloud': No scheme supplied. Perhaps you meant https://triverseacademy.apexneural.cloud?"
+    },
+    {
+      "url": "https://parlant.apexneural.cloud/",
+      "status": "needs_attention",
+      "issue_count": 8,
+      "high_issues": 3,
+      "medium_issues": 3,
+      "last_scan": "2026-01-16T17:06:49.313024"
+    },
+    {
+      "url": "https://paralegal.apexneural.cloud/",
+      "status": "scan_failed",
+      "issue_count": 0,
+      "high_issues": 0,
+      "medium_issues": 0,
+      "last_scan": "",
+      "error": "HTTPSConnectionPool(host='paralegal.apexneural.cloud', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='paralegal.apexneural.cloud', port=443): Failed to resolve 'paralegal.apexneural.cloud' ([Errno 8] nodename nor servname provided, or not known)\"))"
+    },
+    {
+      "url": "https://multiplatform.apexneural.cloud/",
+      "status": "needs_attention",
+      "issue_count": 8,
+      "high_issues": 3,
+      "medium_issues": 3,
+      "last_scan": "2026-01-16T17:06:50.271143"
+    },
+    {
+      "url": "https://stockpilot.apexneural.cloud/",
+      "status": "needs_attention",
+      "issue_count": 4,
+      "high_issues": 2,
+      "medium_issues": 0,
+      "last_scan": "2026-01-16T17:06:50.556902"
+    },
+    {
+      "url": "https://researcherai.apexneural.cloud",
+      "status": "needs_attention",
+      "issue_count": 4,
+      "high_issues": 2,
+      "medium_issues": 0,
+      "last_scan": "2026-01-16T17:06:50.859493"
+    },
+    {
+      "url": "https://mcpnexus.apexneural.cloud/",
+      "status": "scan_failed",
+      "issue_count": 0,
+      "high_issues": 0,
+      "medium_issues": 0,
+      "last_scan": "",
+      "error": "HTTPSConnectionPool(host='mcpnexus.apexneural.cloud', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError(1, \"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'mcpnexus.apexneural.cloud'. (_ssl.c:1032)\")))"
+    },
+    {
+      "url": "https://contextstack.apexneural.cloud",
+      "status": "needs_attention",
+      "issue_count": 4,
+      "high_issues": 2,
+      "medium_issues": 0,
+      "last_scan": "2026-01-16T17:06:51.327540"
+    },
+    {
+      "url": "https://firecrawlai.apexneural.cloud/",
+      "status": "needs_attention",
+      "issue_count": 4,
+      "high_issues": 2,
+      "medium_issues": 0,
+      "last_scan": "2026-01-16T17:06:51.557473"
+    },
+    {
+      "url": "https://groundxdocsai.apexneural.cloud/",
+      "status": "needs_attention",
+      "issue_count": 4,
+      "high_issues": 2,
+      "medium_issues": 0,
+      "last_scan": "2026-01-16T17:06:51.833601"
+    },
+    {
+      "url": "https://motia.apexneural.cloud/",
+      "status": "needs_attention",
+      "issue_count": 8,
+      "high_issues": 3,
+      "medium_issues": 3,
+      "last_scan": "2026-01-16T17:06:52.727037"
+    },
+    {
+      "url": "https://championsgen.framer.website/",
+      "status": "needs_attention",
+      "issue_count": 6,
+      "high_issues": 2,
+      "medium_issues": 2,
+      "last_scan": "2026-01-16T17:06:52.994281"
+    },
+    {
+      "url": "https://course.apexneural.cloud/",
+      "status": "needs_attention",
+      "issue_count": 7,
+      "high_issues": 3,
+      "medium_issues": 3,
+      "last_scan": "2026-01-16T17:06:53.862165"
+    },
+    {
+      "url": "https://dbaas.apexneural.cloud/search",
+      "status": "needs_attention",
+      "issue_count": 8,
+      "high_issues": 3,
+      "medium_issues": 3,
+      "last_scan": "2026-01-16T17:06:54.137739"
+    },
+    {
+      "url": "https://apexsaaskit.apexneural.cloud/",
+      "status": "needs_attention",
+      "issue_count": 4,
+      "high_issues": 2,
+      "medium_issues": 0,
+      "last_scan": "2026-01-16T17:06:54.418971"
+    },
+    {
+      "url": "https://prism.apexneural.cloud/",
+      "status": "needs_attention",
+      "issue_count": 8,
+      "high_issues": 3,
+      "medium_issues": 3,
+      "last_scan": "2026-01-16T17:06:55.289597"
+    },
+    {
+      "url": "https://bookgen.apexneural.cloud/",
+      "status": "needs_attention",
+      "issue_count": 8,
+      "high_issues": 3,
+      "medium_issues": 3,
+      "last_scan": "2026-01-16T17:06:57.195685"
+    },
+    {
+      "url": "https://socialhub.apexneural.cloud/",
+      "status": "needs_attention",
+      "issue_count": 8,
+      "high_issues": 3,
+      "medium_issues": 3,
+      "last_scan": "2026-01-16T17:06:58.106102"
+    },
+    {
+      "url": "https://agenticlabel.apexneural.cloud/",
+      "status": "needs_attention",
+      "issue_count": 4,
+      "high_issues": 2,
+      "medium_issues": 0,
+      "last_scan": "2026-01-16T17:06:58.364824"
+    }
+  ]
+}

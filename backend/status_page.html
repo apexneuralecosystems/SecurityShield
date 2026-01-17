@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Security Status - 23 Websites</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif; 
+            background: #f5f7fa;
+            color: #2c3e50;
+            line-height: 1.6;
+        }
+        .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+        .header { 
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white; 
+            padding: 40px; 
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .header h1 { font-size: 2.5em; margin-bottom: 10px; }
+        .header p { opacity: 0.9; font-size: 1.1em; }
+        .stats { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+            gap: 20px; 
+            margin-bottom: 30px; 
+        }
+        .stat-card { 
+            background: white;
+            padding: 30px; 
+            border-radius: 10px; 
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: transform 0.2s;
+        }
+        .stat-card:hover { transform: translateY(-5px); box-shadow: 0 4px 8px rgba(0,0,0,0.15); }
+        .stat-number { 
+            font-size: 3em; 
+            font-weight: bold; 
+            color: #e74c3c;
+            margin-bottom: 10px;
+        }
+        .stat-label { color: #7f8c8d; font-size: 1.1em; }
+        .status-badge {
+            display: inline-block;
+            padding: 8px 16px;
+            border-radius: 20px;
+            background: #e74c3c;
+            color: white;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        .site-list { margin-top: 30px; }
+        .site-list h2 { margin-bottom: 20px; color: #2c3e50; }
+        .site-item { 
+            padding: 20px; 
+            margin: 10px 0; 
+            border-left: 5px solid #3498db; 
+            background: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .site-item.secure { border-left-color: #27ae60; }
+        .site-item.needs-attention { border-left-color: #e74c3c; }
+        .site-item h3 { margin-bottom: 10px; color: #2c3e50; }
+        .site-item .meta { 
+            display: flex; 
+            gap: 20px; 
+            margin-top: 10px;
+            flex-wrap: wrap;
+        }
+        .site-item .meta span { 
+            padding: 5px 12px;
+            background: #ecf0f1;
+            border-radius: 15px;
+            font-size: 0.9em;
+        }
+        .features { 
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            margin-top: 30px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .features h2 { margin-bottom: 20px; }
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+        .feature-item {
+            padding: 15px;
+            background: #ecf0f1;
+            border-radius: 5px;
+        }
+        .feature-item::before { content: "✓ "; color: #27ae60; font-weight: bold; }
+        @media (max-width: 768px) {
+            .stats { grid-template-columns: 1fr; }
+            .header h1 { font-size: 2em; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🔒 Security Status Dashboard</h1>
+            <p>Last updated: 2026-01-16 17:06:58</p>
+            <div class="status-badge">Status: Needs Improvement</div>
+        </div>
+        
+        <div class="stats">
+            <div class="stat-card">
+                <div class="stat-number">0/23</div>
+                <div class="stat-label">Secure Websites</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">0.0%</div>
+                <div class="stat-label">Security Score</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">47</div>
+                <div class="stat-label">High Priority Issues</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">114</div>
+                <div class="stat-label">Total Issues Detected</div>
+            </div>
+        </div>
+        
+        <div class="site-list">
+            <h2>Website Status (23 websites monitored)</h2>
+            
+            <div class="site-item needs-attention">
+                <h3>https://kutum.apexneural.cloud/</h3>
+                <div class="meta">
+                    <span><strong>Status:</strong> Needs Attention</span>
+                    <span><strong>Issues:</strong> 8</span>
+                    <span><strong>High:</strong> 3</span>
+                    <span><strong>Medium:</strong> 3</span>
+                </div>
+                <small style="color: #7f8c8d;">Last scanned: 2026-01-16T17:06:45</small>
+            </div>
+            
+            <div class="site-item needs-attention">
+                <h3>https://galactictherapeutics.com</h3>
+                <div class="meta">
+                    <span><strong>Status:</strong> Needs Attention</span>
+                    <span><strong>Issues:</strong> 4</span>
+                    <span><strong>High:</strong> 2</span>
+                    <span><strong>Medium:</strong> 0</span>
+                </div>
+                <small style="color: #7f8c8d;">Last scanned: 2026-01-16T17:06:47</small>
+            </div>
+            
+            <div class="site-item needs-attention">
+                <h3>https://sportsai.apexneural.cloud/</h3>
+                <div class="meta">
+                    <span><strong>Status:</strong> Needs Attention</span>
+                    <span><strong>Issues:</strong> 5</span>
+                    <span><strong>High:</strong> 2</span>
+                    <span><strong>Medium:</strong> 1</span>
+                </div>
+                <small style="color: #7f8c8d;">Last scanned: 2026-01-16T17:06:48</small>
+            </div>
+            
+            <div class="site-item needs-attention">
+                <h3>https://e2e-qa.apexneural.cloud</h3>
+                <div class="meta">
+                    <span><strong>Status:</strong> Scan Failed</span>
+                    <span><strong>Issues:</strong> 0</span>
+                    <span><strong>High:</strong> 0</span>
+                    <span><strong>Medium:</strong> 0</span>
+                </div>
+                <small style="color: #7f8c8d;">Last scanned: N/A</small>
+            </div>
+            
+            <div class="site-item needs-attention">
+                <h3>triverseacademy.apexneural.cloud</h3>
+                <div class="meta">
+                    <span><strong>Status:</strong> Scan Failed</span>
+                    <span><strong>Issues:</strong> 0</span>
+                    <span><strong>High:</strong> 0</span>
+                    <span><strong>Medium:</strong> 0</span>
+                </div>
+                <small style="color: #7f8c8d;">Last scanned: N/A</small>
+            </div>
+            
+            <div class="site-item needs-attention">
+                <h3>https://parlant.apexneural.cloud/</h3>
+                <div class="meta">
+                    <span><strong>Status:</strong> Needs Attention</span>
+                    <span><strong>Issues:</strong> 8</span>
+                    <span><strong>High:</strong> 3</span>
+                    <span><strong>Medium:</strong> 3</span>
+                </div>
+                <small style="color: #7f8c8d;">Last scanned: 2026-01-16T17:06:49</small>
+            </div>
+            
+            <div class="site-item needs-attention">
+                <h3>https://paralegal.apexneural.cloud/</h3>
+                <div class="meta">
+                    <span><strong>Status:</strong> Scan Failed</span>
+                    <span><strong>Issues:</strong> 0</span>
+                    <span><strong>High:</strong> 0</span>
+                    <span><strong>Medium:</strong> 0</span>
+                </div>
+                <small style="color: #7f8c8d;">Last scanned: N/A</small>
+            </div>
+            
+            <div class="site-item needs-attention">
+                <h3>https://multiplatform.apexneural.cloud/</h3>
+                <div class="meta">
+                    <span><strong>Status:</strong> Needs Attention</span>
+                    <span><strong>Issues:</strong> 8</span>
+                    <span><strong>High:</strong> 3</span>
+                    <span><strong>Medium:</strong> 3</span>
+                </div>
+                <small style="color: #7f8c8d;">Last scanned: 2026-01-16T17:06:50</small>
+            </div>
+            
+            <div class="site-item needs-attention">
+                <h3>https://stockpilot.apexneural.cloud/</h3>
+                <div class="meta">
+                    <span><strong>Status:</strong> Needs Attention</span>
+                    <span><strong>Issues:</strong> 4</span>
+                    <span><strong>High:</strong> 2</span>
+                    <span><strong>Medium:</strong> 0</span>
+                </div>
+                <small style="color: #7f8c8d;">Last scanned: 2026-01-16T17:06:50</small>
+            </div>
+            
+            <div class="site-item needs-attention">
+                <h3>https://researcherai.apexneural.cloud</h3>
+                <div class="meta">
+                    <span><strong>Status:</strong> Needs Attention</span>
+                    <span><strong>Issues:</strong> 4</span>
+                    <span><strong>High:</strong> 2</span>
+                    <span><strong>Medium:</strong> 0</span>
+                </div>
+                <small style="color: #7f8c8d;">Last scanned: 2026-01-16T17:06:50</small>
+            </div>
+            
+            <div class="site-item needs-attention">
+                <h3>https://mcpnexus.apexneural.cloud/</h3>
+                <div class="meta">
+                    <span><strong>Status:</strong> Scan Failed</span>
+                    <span><strong>Issues:</strong> 0</span>
+                    <span><strong>High:</strong> 0</span>
+                    <span><strong>Medium:</strong> 0</span>
+                </div>
+                <small style="color: #7f8c8d;">Last scanned: N/A</small>
+            </div>
+            
+            <div class="site-item needs-attention">
+                <h3>https://contextstack.apexneural.cloud</h3>
+                <div class="meta">
+                    <span><strong>Status:</strong> Needs Attention</span>
+                    <span><strong>Issues:</strong> 4</span>
+                    <span><strong>High:</strong> 2</span>
+                    <span><strong>Medium:</strong> 0</span>
+                </div>
+                <small style="color: #7f8c8d;">Last scanned: 2026-01-16T17:06:51</small>
+            </div>
+            
+            <div class="site-item needs-attention">
+                <h3>https://firecrawlai.apexneural.cloud/</h3>
+                <div class="meta">
+                    <span><strong>Status:</strong> Needs Attention</span>
+                    <span><strong>Issues:</strong> 4</span>
+                    <span><strong>High:</strong> 2</span>
+                    <span><strong>Medium:</strong> 0</span>
+                </div>
+                <small style="color: #7f8c8d;">Last scanned: 2026-01-16T17:06:51</small>
+            </div>
+            
+            <div class="site-item needs-attention">
+                <h3>https://groundxdocsai.apexneural.cloud/</h3>
+                <div class="meta">
+                    <span><strong>Status:</strong> Needs Attention</span>
+                    <span><strong>Issues:</strong> 4</span>
+                    <span><strong>High:</strong> 2</span>
+                    <span><strong>Medium:</strong> 0</span>
+                </div>
+                <small style="color: #7f8c8d;">Last scanned: 2026-01-16T17:06:51</small>
+            </div>
+            
+            <div class="site-item needs-attention">
+                <h3>https://motia.apexneural.cloud/</h3>
+                <div class="meta">
+                    <span><strong>Status:</strong> Needs Attention</span>
+                    <span><strong>Issues:</strong> 8</span>
+                    <span><strong>High:</strong> 3</span>
+                    <span><strong>Medium:</strong> 3</span>
+                </div>
+                <small style="color: #7f8c8d;">Last scanned: 2026-01-16T17:06:52</small>
+            </div>
+            
+            <div class="site-item needs-attention">
+                <h3>https://championsgen.framer.website/</h3>
+                <div class="meta">
+                    <span><strong>Status:</strong> Needs Attention</span>
+                    <span><strong>Issues:</strong> 6</span>
+                    <span><strong>High:</strong> 2</span>
+                    <span><strong>Medium:</strong> 2</span>
+                </div>
+                <small style="color: #7f8c8d;">Last scanned: 2026-01-16T17:06:52</small>
+            </div>
+            
+            <div class="site-item needs-attention">
+                <h3>https://course.apexneural.cloud/</h3>
+                <div class="meta">
+                    <span><strong>Status:</strong> Needs Attention</span>
+                    <span><strong>Issues:</strong> 7</span>
+                    <span><strong>High:</strong> 3</span>
+                    <span><strong>Medium:</strong> 3</span>
+                </div>
+                <small style="color: #7f8c8d;">Last scanned: 2026-01-16T17:06:53</small>
+            </div>
+            
+            <div class="site-item needs-attention">
+                <h3>https://dbaas.apexneural.cloud/search</h3>
+                <div class="meta">
+                    <span><strong>Status:</strong> Needs Attention</span>
+                    <span><strong>Issues:</strong> 8</span>
+                    <span><strong>High:</strong> 3</span>
+                    <span><strong>Medium:</strong> 3</span>
+                </div>
+                <small style="color: #7f8c8d;">Last scanned: 2026-01-16T17:06:54</small>
+            </div>
+            
+            <div class="site-item needs-attention">
+                <h3>https://apexsaaskit.apexneural.cloud/</h3>
+                <div class="meta">
+                    <span><strong>Status:</strong> Needs Attention</span>
+                    <span><strong>Issues:</strong> 4</span>
+                    <span><strong>High:</strong> 2</span>
+                    <span><strong>Medium:</strong> 0</span>
+                </div>
+                <small style="color: #7f8c8d;">Last scanned: 2026-01-16T17:06:54</small>
+            </div>
+            
+            <div class="site-item needs-attention">
+                <h3>https://prism.apexneural.cloud/</h3>
+                <div class="meta">
+                    <span><strong>Status:</strong> Needs Attention</span>
+                    <span><strong>Issues:</strong> 8</span>
+                    <span><strong>High:</strong> 3</span>
+                    <span><strong>Medium:</strong> 3</span>
+                </div>
+                <small style="color: #7f8c8d;">Last scanned: 2026-01-16T17:06:55</small>
+            </div>
+            
+            <div class="site-item needs-attention">
+                <h3>https://bookgen.apexneural.cloud/</h3>
+                <div class="meta">
+                    <span><strong>Status:</strong> Needs Attention</span>
+                    <span><strong>Issues:</strong> 8</span>
+                    <span><strong>High:</strong> 3</span>
+                    <span><strong>Medium:</strong> 3</span>
+                </div>
+                <small style="color: #7f8c8d;">Last scanned: 2026-01-16T17:06:57</small>
+            </div>
+            
+            <div class="site-item needs-attention">
+                <h3>https://socialhub.apexneural.cloud/</h3>
+                <div class="meta">
+                    <span><strong>Status:</strong> Needs Attention</span>
+                    <span><strong>Issues:</strong> 8</span>
+                    <span><strong>High:</strong> 3</span>
+                    <span><strong>Medium:</strong> 3</span>
+                </div>
+                <small style="color: #7f8c8d;">Last scanned: 2026-01-16T17:06:58</small>
+            </div>
+            
+            <div class="site-item needs-attention">
+                <h3>https://agenticlabel.apexneural.cloud/</h3>
+                <div class="meta">
+                    <span><strong>Status:</strong> Needs Attention</span>
+                    <span><strong>Issues:</strong> 4</span>
+                    <span><strong>High:</strong> 2</span>
+                    <span><strong>Medium:</strong> 0</span>
+                </div>
+                <small style="color: #7f8c8d;">Last scanned: 2026-01-16T17:06:58</small>
+            </div>
+            
+        </div>
+        
+        <div class="features">
+            <h2>Security Features Implemented</h2>
+            <div class="features-grid">
+                <div class="feature-item">HTTPS & TLS encryption enforced</div>
+                <div class="feature-item">Secure HTTP headers (CSP, HSTS, XFO)</div>
+                <div class="feature-item">OWASP Top-10 aligned scanning</div>
+                <div class="feature-item">Regular vulnerability detection</div>
+                <div class="feature-item">Multi-environment monitoring</div>
+                <div class="feature-item">Security reports generated</div>
+                <div class="feature-item">Responsible disclosure supported</div>
+                <div class="feature-item">Automated security alerts</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

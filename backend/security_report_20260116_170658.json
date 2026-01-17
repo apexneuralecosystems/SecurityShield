@@ -1,0 +1,1095 @@
+{
+  "scan_timestamp": "2026-01-16T17:06:58.367008",
+  "responsible_disclosure": {
+    "supported": true,
+    "contact": "security@yourdomain.com",
+    "policy_url": "",
+    "reporting_guidelines": "Please report security issues responsibly via the contact email"
+  },
+  "multi_environment": true,
+  "environments_scanned": [
+    "https://kutum.apexneural.cloud/",
+    "https://galactictherapeutics.com",
+    "https://sportsai.apexneural.cloud/",
+    "https://e2e-qa.apexneural.cloud",
+    "triverseacademy.apexneural.cloud",
+    "https://parlant.apexneural.cloud/",
+    "https://paralegal.apexneural.cloud/",
+    "https://multiplatform.apexneural.cloud/",
+    "https://stockpilot.apexneural.cloud/",
+    "https://researcherai.apexneural.cloud",
+    "https://mcpnexus.apexneural.cloud/",
+    "https://contextstack.apexneural.cloud",
+    "https://firecrawlai.apexneural.cloud/",
+    "https://groundxdocsai.apexneural.cloud/",
+    "https://motia.apexneural.cloud/",
+    "https://championsgen.framer.website/",
+    "https://course.apexneural.cloud/",
+    "https://dbaas.apexneural.cloud/search",
+    "https://apexsaaskit.apexneural.cloud/",
+    "https://prism.apexneural.cloud/",
+    "https://bookgen.apexneural.cloud/",
+    "https://socialhub.apexneural.cloud/",
+    "https://agenticlabel.apexneural.cloud/"
+  ],
+  "results": {
+    "https://kutum.apexneural.cloud/": {
+      "url": "https://kutum.apexneural.cloud/",
+      "scans": {
+        "quick": {
+          "scan_time": "2026-01-16T17:06:45.147439",
+          "issues": [
+            {
+              "impact": "HIGH",
+              "type": "Missing Content-Security-Policy",
+              "description": "Content-Security-Policy header not set",
+              "status": "open",
+              "reported_at": "2026-01-16T17:06:45.147452"
+            },
+            {
+              "impact": "HIGH",
+              "type": "Missing Strict-Transport-Security",
+              "description": "Strict-Transport-Security header not set",
+              "status": "open",
+              "reported_at": "2026-01-16T17:06:45.147457"
+            },
+            {
+              "impact": "HIGH",
+              "type": "Missing X-Frame-Options",
+              "description": "X-Frame-Options header not set",
+              "status": "open",
+              "reported_at": "2026-01-16T17:06:45.147460"
+            },
+            {
+              "impact": "MEDIUM",
+              "type": "Missing X-Content-Type-Options",
+              "description": "X-Content-Type-Options header not set",
+              "status": "open",
+              "reported_at": "2026-01-16T17:06:45.147463"
+            },
+            {
+              "impact": "MEDIUM",
+              "type": "Missing X-XSS-Protection",
+              "description": "X-XSS-Protection header not set",
+              "status": "open",
+              "reported_at": "2026-01-16T17:06:45.147466"
+            },
+            {
+              "impact": "MEDIUM",
+              "type": "Missing Referrer-Policy",
+              "description": "Referrer-Policy header not set",
+              "status": "open",
+              "reported_at": "2026-01-16T17:06:45.147468"
+            },
+            {
+              "impact": "LOW",
+              "type": "Missing Permissions-Policy",
+              "description": "Permissions-Policy header not set",
+              "status": "open",
+              "reported_at": "2026-01-16T17:06:45.147470"
+            },
+            {
+              "impact": "LOW",
+              "type": "Server Disclosure",
+              "description": "nginx/1.29.4",
+              "status": "open",
+              "reported_at": "2026-01-16T17:06:45.147473"
+            }
+          ],
+          "issue_count": 8,
+          "owasp_aligned": true
+        }
+      }
+    },
+    "https://galactictherapeutics.com": {
+      "url": "https://galactictherapeutics.com",
+      "scans": {
+        "quick": {
+          "scan_time": "2026-01-16T17:06:47.463122",
+          "issues": [
+            {
+              "impact": "HIGH",
+              "type": "Missing Content-Security-Policy",
+              "description": "Content-Security-Policy header not set",
+              "status": "open",
+              "reported_at": "2026-01-16T17:06:47.463138"
+            },
+            {
+              "impact": "HIGH",
+              "type": "Missing Strict-Transport-Security",
+              "description": "Strict-Transport-Security header not set",
+              "status": "open",
+              "reported_at": "2026-01-16T17:06:47.463142"
+            },
+            {
+              "impact": "LOW",
+              "type": "Missing Permissions-Policy",
+              "description": "Permissions-Policy header not set",
+              "status": "open",
+              "reported_at": "2026-01-16T17:06:47.463145"
+            },
+            {
+              "impact": "LOW",
+              "type": "Server Disclosure",
+              "description": "cloudflare",
+              "status": "open",
+              "reported_at": "2026-01-16T17:06:47.463148"
+            }
+          ],
+          "issue_count": 4,
+          "owasp_aligned": true
+        }
+      }
+    },
+    "https://sportsai.apexneural.cloud/": {
+      "url": "https://sportsai.apexneural.cloud/",
+      "scans": {
+        "quick": {
+          "scan_time": "2026-01-16T17:06:48.360507",
+          "issues": [
+            {
+              "impact": "HIGH",
+              "type": "Missing Content-Security-Policy",
+              "description": "Content-Security-Policy header not set",
+              "status": "open",
+              "reported_at": "2026-01-16T17:06:48.360518"
+            },
+            {
+              "impact": "HIGH",
+              "type": "Missing Strict-Transport-Security",
+              "description": "Strict-Transport-Security header not set",
+              "status": "open",
+              "reported_at": "2026-01-16T17:06:48.360522"
+            },
+            {
+              "impact": "MEDIUM",
+              "type": "Missing Referrer-Policy",
+              "description": "Referrer-Policy header not set",
+              "status": "open",
+              "reported_at": "2026-01-16T17:06:48.360525"
+            },
+            {
+              "impact": "LOW",
+              "type": "Missing Permissions-Policy",
+              "description": "Permissions-Policy header not set",
+              "status": "open",
+              "reported_at": "2026-01-16T17:06:48.360527"
+            },
+            {
+              "impact": "LOW",
+              "type": "Server Disclosure",
+              "description": "nginx/1.29.4",
+              "status": "open",
+              "reported_at": "2026-01-16T17:06:48.360530"
+            }
+          ],
+          "issue_count": 5,
+          "owasp_aligned": true
+        }
+      }
+    },
+    "https://e2e-qa.apexneural.cloud": {
+      "url": "https://e2e-qa.apexneural.cloud",
+      "scans": {
+        "quick": {
+          "error": "HTTPSConnectionPool(host='e2e-qa.apexneural.cloud', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='e2e-qa.apexneural.cloud', port=443): Failed to resolve 'e2e-qa.apexneural.cloud' ([Errno 8] nodename nor servname provided, or not known)\"))"
+        }
+      }
+    },
+    "triverseacademy.apexneural.cloud": {
+      "url": "triverseacademy.apexneural.cloud",
+      "scans": {
+        "quick": {
+          "error": "Invalid URL 'triverseacademy.apexneural.cloud': No scheme supplied. Perhaps you meant https://triverseacademy.apexneural.cloud?"
+        }
+      }
+    },
+    "https://parlant.apexneural.cloud/": {
+      "url": "https://parlant.apexneural.cloud/",
+      "scans": {
+        "quick": {
+          "scan_time": "2026-01-16T17:06:49.313024",
+          "issues": [
+            {
+              "impact": "HIGH",
+              "type": "Missing Content-Security-Policy",
+              "description": "Content-Security-Policy header not set",
+              "status": "open",
+              "reported_at": "2026-01-16T17:06:49.313040"
+            },
+            {
+              "impact": "HIGH",
+              "type": "Missing Strict-Transport-Security",
+              "description": "Strict-Transport-Security header not set",
+              "status": "open",
+              "reported_at": "2026-01-16T17:06:49.313046"
+            },
+            {
+              "impact": "HIGH",
+              "type": "Missing X-Frame-Options",
+              "description": "X-Frame-Options header not set",
+              "status": "open",
+              "reported_at": "2026-01-16T17:06:49.313049"
+            },
+            {
+              "impact": "MEDIUM",
+              "type": "Missing X-Content-Type-Options",
+              "description": "X-Content-Type-Options header not set",
+              "status": "open",
+              "reported_at": "2026-01-16T17:06:49.313053"
+            },
+            {
+              "impact": "MEDIUM",
+              "type": "Missing X-XSS-Protection",
+              "description": "X-XSS-Protection header not set",
+              "status": "open",
+              "reported_at": "2026-01-16T17:06:49.313056"
+            },
+            {
+              "impact": "MEDIUM",
+              "type": "Missing Referrer-Policy",
+              "description": "Referrer-Policy header not set",
+              "status": "open",
+              "reported_at": "2026-01-16T17:06:49.313059"
+            },
+            {
+              "impact": "LOW",
+              "type": "Missing Permissions-Policy",
+              "description": "Permissions-Policy header not set",
+              "status": "open",
+              "reported_at": "2026-01-16T17:06:49.313062"
+            },
+            {
+              "impact": "LOW",
+              "type": "Server Disclosure",
+              "description": "nginx/1.29.4",
+              "status": "open",
+              "reported_at": "2026-01-16T17:06:49.313065"
+            }
+          ],
+          "issue_count": 8,
+          "owasp_aligned": true
+        }
+      }
+    },
+    "https://paralegal.apexneural.cloud/": {
+      "url": "https://paralegal.apexneural.cloud/",
+      "scans": {
+        "quick": {
+          "error": "HTTPSConnectionPool(host='paralegal.apexneural.cloud', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='paralegal.apexneural.cloud', port=443): Failed to resolve 'paralegal.apexneural.cloud' ([Errno 8] nodename nor servname provided, or not known)\"))"
+        }
+      }
+    },
+    "https://multiplatform.apexneural.cloud/": {
+      "url": "https://multiplatform.apexneural.cloud/",
+      "scans": {
+        "quick": {
+          "scan_time": "2026-01-16T17:06:50.271143",
+          "issues": [
+            {
+              "impact": "HIGH",
+              "type": "Missing Content-Security-Policy",
+              "description": "Content-Security-Policy header not set",
+              "status": "open",
+              "reported_at": "2026-01-16T17:06:50.271162"
+            },
+            {
+              "impact": "HIGH",
+              "type": "Missing Strict-Transport-Security",
+              "description": "Strict-Transport-Security header not set",
+              "status": "open",
+              "reported_at": "2026-01-16T17:06:50.271168"
+            },
+            {
+              "impact": "HIGH",
+              "type": "Missing X-Frame-Options",
+              "description": "X-Frame-Options header not set",
+              "status": "open",
+              "reported_at": "2026-01-16T17:06:50.271172"
+            },
+            {
+              "impact": "MEDIUM",
+              "type": "Missing X-Content-Type-Options",
+              "description": "X-Content-Type-Options header not set",
+              "status": "open",
+              "reported_at": "2026-01-16T17:06:50.271175"
+            },
+            {
+              "impact": "MEDIUM",
+              "type": "Missing X-XSS-Protection",
+              "description": "X-XSS-Protection header not set",
+              "status": "open",
+              "reported_at": "2026-01-16T17:06:50.271179"
+            },
+            {
+              "impact": "MEDIUM",
+              "type": "Missing Referrer-Policy",
+              "description": "Referrer-Policy header not set",
+              "status": "open",
+              "reported_at": "2026-01-16T17:06:50.271182"
+            },
+            {
+              "impact": "LOW",
+              "type": "Missing Permissions-Policy",
+              "description": "Permissions-Policy header not set",
+              "status": "open",
+              "reported_at": "2026-01-16T17:06:50.271185"
+            },
+            {
+              "impact": "LOW",
+              "type": "Server Disclosure",
+              "description": "nginx/1.29.4",
+              "status": "open",
+              "reported_at": "2026-01-16T17:06:50.271188"
+            }
+          ],
+          "issue_count": 8,
+          "owasp_aligned": true
+        }
+      }
+    },
+    "https://stockpilot.apexneural.cloud/": {
+      "url": "https://stockpilot.apexneural.cloud/",
+      "scans": {
+        "quick": {
+          "scan_time": "2026-01-16T17:06:50.556902",
+          "issues": [
+            {
+              "impact": "HIGH",
+              "type": "Missing Content-Security-Policy",
+              "description": "Content-Security-Policy header not set",
+              "status": "open",
+              "reported_at": "2026-01-16T17:06:50.556921"
+            },
+            {
+              "impact": "HIGH",
+              "type": "Missing Strict-Transport-Security",
+              "description": "Strict-Transport-Security header not set",
+              "status": "open",
+              "reported_at": "2026-01-16T17:06:50.556926"
+            },
+            {
+              "impact": "LOW",
+              "type": "Missing Permissions-Policy",
+              "description": "Permissions-Policy header not set",
+              "status": "open",
+              "reported_at": "2026-01-16T17:06:50.556930"
+            },
+            {
+              "impact": "LOW",
+              "type": "Server Disclosure",
+              "description": "nginx",
+              "status": "open",
+              "reported_at": "2026-01-16T17:06:50.556934"
+            }
+          ],
+          "issue_count": 4,
+          "owasp_aligned": true
+        }
+      }
+    },
+    "https://researcherai.apexneural.cloud": {
+      "url": "https://researcherai.apexneural.cloud",
+      "scans": {
+        "quick": {
+          "scan_time": "2026-01-16T17:06:50.859493",
+          "issues": [
+            {
+              "impact": "HIGH",
+              "type": "Missing Content-Security-Policy",
+              "description": "Content-Security-Policy header not set",
+              "status": "open",
+              "reported_at": "2026-01-16T17:06:50.859513"
+            },
+            {
+              "impact": "HIGH",
+              "type": "Missing Strict-Transport-Security",
+              "description": "Strict-Transport-Security header not set",
+              "status": "open",
+              "reported_at": "2026-01-16T17:06:50.859519"
+            },
+            {
+              "impact": "LOW",
+              "type": "Missing Permissions-Policy",
+              "description": "Permissions-Policy header not set",
+              "status": "open",
+              "reported_at": "2026-01-16T17:06:50.859523"
+            },
+            {
+              "impact": "LOW",
+              "type": "Server Disclosure",
+              "description": "nginx",
+              "status": "open",
+              "reported_at": "2026-01-16T17:06:50.859526"
+            }
+          ],
+          "issue_count": 4,
+          "owasp_aligned": true
+        }
+      }
+    },
+    "https://mcpnexus.apexneural.cloud/": {
+      "url": "https://mcpnexus.apexneural.cloud/",
+      "scans": {
+        "quick": {
+          "error": "HTTPSConnectionPool(host='mcpnexus.apexneural.cloud', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError(1, \"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'mcpnexus.apexneural.cloud'. (_ssl.c:1032)\")))"
+        }
+      }
+    },
+    "https://contextstack.apexneural.cloud": {
+      "url": "https://contextstack.apexneural.cloud",
+      "scans": {
+        "quick": {
+          "scan_time": "2026-01-16T17:06:51.327540",
+          "issues": [
+            {
+              "impact": "HIGH",
+              "type": "Missing Content-Security-Policy",
+              "description": "Content-Security-Policy header not set",
+              "status": "open",
+              "reported_at": "2026-01-16T17:06:51.327546"
+            },
+            {
+              "impact": "HIGH",
+              "type": "Missing Strict-Transport-Security",
+              "description": "Strict-Transport-Security header not set",
+              "status": "open",
+              "reported_at": "2026-01-16T17:06:51.327548"
+            },
+            {
+              "impact": "LOW",
+              "type": "Missing Permissions-Policy",
+              "description": "Permissions-Policy header not set",
+              "status": "open",
+              "reported_at": "2026-01-16T17:06:51.327550"
+            },
+            {
+              "impact": "LOW",
+              "type": "Server Disclosure",
+              "description": "nginx",
+              "status": "open",
+              "reported_at": "2026-01-16T17:06:51.327551"
+            }
+          ],
+          "issue_count": 4,
+          "owasp_aligned": true
+        }
+      }
+    },
+    "https://firecrawlai.apexneural.cloud/": {
+      "url": "https://firecrawlai.apexneural.cloud/",
+      "scans": {
+        "quick": {
+          "scan_time": "2026-01-16T17:06:51.557473",
+          "issues": [
+            {
+              "impact": "HIGH",
+              "type": "Missing Content-Security-Policy",
+              "description": "Content-Security-Policy header not set",
+              "status": "open",
+              "reported_at": "2026-01-16T17:06:51.557479"
+            },
+            {
+              "impact": "HIGH",
+              "type": "Missing Strict-Transport-Security",
+              "description": "Strict-Transport-Security header not set",
+              "status": "open",
+              "reported_at": "2026-01-16T17:06:51.557481"
+            },
+            {
+              "impact": "LOW",
+              "type": "Missing Permissions-Policy",
+              "description": "Permissions-Policy header not set",
+              "status": "open",
+              "reported_at": "2026-01-16T17:06:51.557483"
+            },
+            {
+              "impact": "LOW",
+              "type": "Server Disclosure",
+              "description": "nginx",
+              "status": "open",
+              "reported_at": "2026-01-16T17:06:51.557484"
+            }
+          ],
+          "issue_count": 4,
+          "owasp_aligned": true
+        }
+      }
+    },
+    "https://groundxdocsai.apexneural.cloud/": {
+      "url": "https://groundxdocsai.apexneural.cloud/",
+      "scans": {
+        "quick": {
+          "scan_time": "2026-01-16T17:06:51.833601",
+          "issues": [
+            {
+              "impact": "HIGH",
+              "type": "Missing Content-Security-Policy",
+              "description": "Content-Security-Policy header not set",
+              "status": "open",
+              "reported_at": "2026-01-16T17:06:51.833610"
+            },
+            {
+              "impact": "HIGH",
+              "type": "Missing Strict-Transport-Security",
+              "description": "Strict-Transport-Security header not set",
+              "status": "open",
+              "reported_at": "2026-01-16T17:06:51.833613"
+            },
+            {
+              "impact": "LOW",
+              "type": "Missing Permissions-Policy",
+              "description": "Permissions-Policy header not set",
+              "status": "open",
+              "reported_at": "2026-01-16T17:06:51.833614"
+            },
+            {
+              "impact": "LOW",
+              "type": "Server Disclosure",
+              "description": "nginx",
+              "status": "open",
+              "reported_at": "2026-01-16T17:06:51.833616"
+            }
+          ],
+          "issue_count": 4,
+          "owasp_aligned": true
+        }
+      }
+    },
+    "https://motia.apexneural.cloud/": {
+      "url": "https://motia.apexneural.cloud/",
+      "scans": {
+        "quick": {
+          "scan_time": "2026-01-16T17:06:52.727037",
+          "issues": [
+            {
+              "impact": "HIGH",
+              "type": "Missing Content-Security-Policy",
+              "description": "Content-Security-Policy header not set",
+              "status": "open",
+              "reported_at": "2026-01-16T17:06:52.727063"
+            },
+            {
+              "impact": "HIGH",
+              "type": "Missing Strict-Transport-Security",
+              "description": "Strict-Transport-Security header not set",
+              "status": "open",
+              "reported_at": "2026-01-16T17:06:52.727068"
+            },
+            {
+              "impact": "HIGH",
+              "type": "Missing X-Frame-Options",
+              "description": "X-Frame-Options header not set",
+              "status": "open",
+              "reported_at": "2026-01-16T17:06:52.727071"
+            },
+            {
+              "impact": "MEDIUM",
+              "type": "Missing X-Content-Type-Options",
+              "description": "X-Content-Type-Options header not set",
+              "status": "open",
+              "reported_at": "2026-01-16T17:06:52.727074"
+            },
+            {
+              "impact": "MEDIUM",
+              "type": "Missing X-XSS-Protection",
+              "description": "X-XSS-Protection header not set",
+              "status": "open",
+              "reported_at": "2026-01-16T17:06:52.727079"
+            },
+            {
+              "impact": "MEDIUM",
+              "type": "Missing Referrer-Policy",
+              "description": "Referrer-Policy header not set",
+              "status": "open",
+              "reported_at": "2026-01-16T17:06:52.727082"
+            },
+            {
+              "impact": "LOW",
+              "type": "Missing Permissions-Policy",
+              "description": "Permissions-Policy header not set",
+              "status": "open",
+              "reported_at": "2026-01-16T17:06:52.727085"
+            },
+            {
+              "impact": "LOW",
+              "type": "Server Disclosure",
+              "description": "nginx/1.29.4",
+              "status": "open",
+              "reported_at": "2026-01-16T17:06:52.727088"
+            }
+          ],
+          "issue_count": 8,
+          "owasp_aligned": true
+        }
+      }
+    },
+    "https://championsgen.framer.website/": {
+      "url": "https://championsgen.framer.website/",
+      "scans": {
+        "quick": {
+          "scan_time": "2026-01-16T17:06:52.994281",
+          "issues": [
+            {
+              "impact": "HIGH",
+              "type": "Missing Content-Security-Policy",
+              "description": "Content-Security-Policy header not set",
+              "status": "open",
+              "reported_at": "2026-01-16T17:06:52.994293"
+            },
+            {
+              "impact": "HIGH",
+              "type": "Missing X-Frame-Options",
+              "description": "X-Frame-Options header not set",
+              "status": "open",
+              "reported_at": "2026-01-16T17:06:52.994297"
+            },
+            {
+              "impact": "MEDIUM",
+              "type": "Missing X-XSS-Protection",
+              "description": "X-XSS-Protection header not set",
+              "status": "open",
+              "reported_at": "2026-01-16T17:06:52.994300"
+            },
+            {
+              "impact": "MEDIUM",
+              "type": "Missing Referrer-Policy",
+              "description": "Referrer-Policy header not set",
+              "status": "open",
+              "reported_at": "2026-01-16T17:06:52.994303"
+            },
+            {
+              "impact": "LOW",
+              "type": "Missing Permissions-Policy",
+              "description": "Permissions-Policy header not set",
+              "status": "open",
+              "reported_at": "2026-01-16T17:06:52.994305"
+            },
+            {
+              "impact": "LOW",
+              "type": "Server Disclosure",
+              "description": "Framer/7752604",
+              "status": "open",
+              "reported_at": "2026-01-16T17:06:52.994308"
+            }
+          ],
+          "issue_count": 6,
+          "owasp_aligned": true
+        }
+      }
+    },
+    "https://course.apexneural.cloud/": {
+      "url": "https://course.apexneural.cloud/",
+      "scans": {
+        "quick": {
+          "scan_time": "2026-01-16T17:06:53.862165",
+          "issues": [
+            {
+              "impact": "HIGH",
+              "type": "Missing Content-Security-Policy",
+              "description": "Content-Security-Policy header not set",
+              "status": "open",
+              "reported_at": "2026-01-16T17:06:53.862184"
+            },
+            {
+              "impact": "HIGH",
+              "type": "Missing Strict-Transport-Security",
+              "description": "Strict-Transport-Security header not set",
+              "status": "open",
+              "reported_at": "2026-01-16T17:06:53.862190"
+            },
+            {
+              "impact": "HIGH",
+              "type": "Missing X-Frame-Options",
+              "description": "X-Frame-Options header not set",
+              "status": "open",
+              "reported_at": "2026-01-16T17:06:53.862194"
+            },
+            {
+              "impact": "MEDIUM",
+              "type": "Missing X-Content-Type-Options",
+              "description": "X-Content-Type-Options header not set",
+              "status": "open",
+              "reported_at": "2026-01-16T17:06:53.862198"
+            },
+            {
+              "impact": "MEDIUM",
+              "type": "Missing X-XSS-Protection",
+              "description": "X-XSS-Protection header not set",
+              "status": "open",
+              "reported_at": "2026-01-16T17:06:53.862201"
+            },
+            {
+              "impact": "MEDIUM",
+              "type": "Missing Referrer-Policy",
+              "description": "Referrer-Policy header not set",
+              "status": "open",
+              "reported_at": "2026-01-16T17:06:53.862205"
+            },
+            {
+              "impact": "LOW",
+              "type": "Missing Permissions-Policy",
+              "description": "Permissions-Policy header not set",
+              "status": "open",
+              "reported_at": "2026-01-16T17:06:53.862208"
+            }
+          ],
+          "issue_count": 7,
+          "owasp_aligned": true
+        }
+      }
+    },
+    "https://dbaas.apexneural.cloud/search": {
+      "url": "https://dbaas.apexneural.cloud/search",
+      "scans": {
+        "quick": {
+          "scan_time": "2026-01-16T17:06:54.137739",
+          "issues": [
+            {
+              "impact": "HIGH",
+              "type": "Missing Content-Security-Policy",
+              "description": "Content-Security-Policy header not set",
+              "status": "open",
+              "reported_at": "2026-01-16T17:06:54.137754"
+            },
+            {
+              "impact": "HIGH",
+              "type": "Missing Strict-Transport-Security",
+              "description": "Strict-Transport-Security header not set",
+              "status": "open",
+              "reported_at": "2026-01-16T17:06:54.137762"
+            },
+            {
+              "impact": "HIGH",
+              "type": "Missing X-Frame-Options",
+              "description": "X-Frame-Options header not set",
+              "status": "open",
+              "reported_at": "2026-01-16T17:06:54.137765"
+            },
+            {
+              "impact": "MEDIUM",
+              "type": "Missing X-Content-Type-Options",
+              "description": "X-Content-Type-Options header not set",
+              "status": "open",
+              "reported_at": "2026-01-16T17:06:54.137768"
+            },
+            {
+              "impact": "MEDIUM",
+              "type": "Missing X-XSS-Protection",
+              "description": "X-XSS-Protection header not set",
+              "status": "open",
+              "reported_at": "2026-01-16T17:06:54.137771"
+            },
+            {
+              "impact": "MEDIUM",
+              "type": "Missing Referrer-Policy",
+              "description": "Referrer-Policy header not set",
+              "status": "open",
+              "reported_at": "2026-01-16T17:06:54.137774"
+            },
+            {
+              "impact": "LOW",
+              "type": "Missing Permissions-Policy",
+              "description": "Permissions-Policy header not set",
+              "status": "open",
+              "reported_at": "2026-01-16T17:06:54.137787"
+            },
+            {
+              "impact": "LOW",
+              "type": "Server Disclosure",
+              "description": "nginx",
+              "status": "open",
+              "reported_at": "2026-01-16T17:06:54.137791"
+            }
+          ],
+          "issue_count": 8,
+          "owasp_aligned": true
+        }
+      }
+    },
+    "https://apexsaaskit.apexneural.cloud/": {
+      "url": "https://apexsaaskit.apexneural.cloud/",
+      "scans": {
+        "quick": {
+          "scan_time": "2026-01-16T17:06:54.418971",
+          "issues": [
+            {
+              "impact": "HIGH",
+              "type": "Missing Content-Security-Policy",
+              "description": "Content-Security-Policy header not set",
+              "status": "open",
+              "reported_at": "2026-01-16T17:06:54.418989"
+            },
+            {
+              "impact": "HIGH",
+              "type": "Missing Strict-Transport-Security",
+              "description": "Strict-Transport-Security header not set",
+              "status": "open",
+              "reported_at": "2026-01-16T17:06:54.418998"
+            },
+            {
+              "impact": "LOW",
+              "type": "Missing Permissions-Policy",
+              "description": "Permissions-Policy header not set",
+              "status": "open",
+              "reported_at": "2026-01-16T17:06:54.419002"
+            },
+            {
+              "impact": "LOW",
+              "type": "Server Disclosure",
+              "description": "nginx",
+              "status": "open",
+              "reported_at": "2026-01-16T17:06:54.419006"
+            }
+          ],
+          "issue_count": 4,
+          "owasp_aligned": true
+        }
+      }
+    },
+    "https://prism.apexneural.cloud/": {
+      "url": "https://prism.apexneural.cloud/",
+      "scans": {
+        "quick": {
+          "scan_time": "2026-01-16T17:06:55.289597",
+          "issues": [
+            {
+              "impact": "HIGH",
+              "type": "Missing Content-Security-Policy",
+              "description": "Content-Security-Policy header not set",
+              "status": "open",
+              "reported_at": "2026-01-16T17:06:55.289614"
+            },
+            {
+              "impact": "HIGH",
+              "type": "Missing Strict-Transport-Security",
+              "description": "Strict-Transport-Security header not set",
+              "status": "open",
+              "reported_at": "2026-01-16T17:06:55.289620"
+            },
+            {
+              "impact": "HIGH",
+              "type": "Missing X-Frame-Options",
+              "description": "X-Frame-Options header not set",
+              "status": "open",
+              "reported_at": "2026-01-16T17:06:55.289624"
+            },
+            {
+              "impact": "MEDIUM",
+              "type": "Missing X-Content-Type-Options",
+              "description": "X-Content-Type-Options header not set",
+              "status": "open",
+              "reported_at": "2026-01-16T17:06:55.289628"
+            },
+            {
+              "impact": "MEDIUM",
+              "type": "Missing X-XSS-Protection",
+              "description": "X-XSS-Protection header not set",
+              "status": "open",
+              "reported_at": "2026-01-16T17:06:55.289631"
+            },
+            {
+              "impact": "MEDIUM",
+              "type": "Missing Referrer-Policy",
+              "description": "Referrer-Policy header not set",
+              "status": "open",
+              "reported_at": "2026-01-16T17:06:55.289635"
+            },
+            {
+              "impact": "LOW",
+              "type": "Missing Permissions-Policy",
+              "description": "Permissions-Policy header not set",
+              "status": "open",
+              "reported_at": "2026-01-16T17:06:55.289638"
+            },
+            {
+              "impact": "LOW",
+              "type": "Server Disclosure",
+              "description": "nginx/1.29.4",
+              "status": "open",
+              "reported_at": "2026-01-16T17:06:55.289641"
+            }
+          ],
+          "issue_count": 8,
+          "owasp_aligned": true
+        }
+      }
+    },
+    "https://bookgen.apexneural.cloud/": {
+      "url": "https://bookgen.apexneural.cloud/",
+      "scans": {
+        "quick": {
+          "scan_time": "2026-01-16T17:06:57.195685",
+          "issues": [
+            {
+              "impact": "HIGH",
+              "type": "Missing Content-Security-Policy",
+              "description": "Content-Security-Policy header not set",
+              "status": "open",
+              "reported_at": "2026-01-16T17:06:57.195712"
+            },
+            {
+              "impact": "HIGH",
+              "type": "Missing Strict-Transport-Security",
+              "description": "Strict-Transport-Security header not set",
+              "status": "open",
+              "reported_at": "2026-01-16T17:06:57.195719"
+            },
+            {
+              "impact": "HIGH",
+              "type": "Missing X-Frame-Options",
+              "description": "X-Frame-Options header not set",
+              "status": "open",
+              "reported_at": "2026-01-16T17:06:57.195723"
+            },
+            {
+              "impact": "MEDIUM",
+              "type": "Missing X-Content-Type-Options",
+              "description": "X-Content-Type-Options header not set",
+              "status": "open",
+              "reported_at": "2026-01-16T17:06:57.195727"
+            },
+            {
+              "impact": "MEDIUM",
+              "type": "Missing X-XSS-Protection",
+              "description": "X-XSS-Protection header not set",
+              "status": "open",
+              "reported_at": "2026-01-16T17:06:57.195730"
+            },
+            {
+              "impact": "MEDIUM",
+              "type": "Missing Referrer-Policy",
+              "description": "Referrer-Policy header not set",
+              "status": "open",
+              "reported_at": "2026-01-16T17:06:57.195734"
+            },
+            {
+              "impact": "LOW",
+              "type": "Missing Permissions-Policy",
+              "description": "Permissions-Policy header not set",
+              "status": "open",
+              "reported_at": "2026-01-16T17:06:57.195737"
+            },
+            {
+              "impact": "LOW",
+              "type": "Server Disclosure",
+              "description": "nginx/1.29.4",
+              "status": "open",
+              "reported_at": "2026-01-16T17:06:57.195740"
+            }
+          ],
+          "issue_count": 8,
+          "owasp_aligned": true
+        }
+      }
+    },
+    "https://socialhub.apexneural.cloud/": {
+      "url": "https://socialhub.apexneural.cloud/",
+      "scans": {
+        "quick": {
+          "scan_time": "2026-01-16T17:06:58.106102",
+          "issues": [
+            {
+              "impact": "HIGH",
+              "type": "Missing Content-Security-Policy",
+              "description": "Content-Security-Policy header not set",
+              "status": "open",
+              "reported_at": "2026-01-16T17:06:58.106120"
+            },
+            {
+              "impact": "HIGH",
+              "type": "Missing Strict-Transport-Security",
+              "description": "Strict-Transport-Security header not set",
+              "status": "open",
+              "reported_at": "2026-01-16T17:06:58.106126"
+            },
+            {
+              "impact": "HIGH",
+              "type": "Missing X-Frame-Options",
+              "description": "X-Frame-Options header not set",
+              "status": "open",
+              "reported_at": "2026-01-16T17:06:58.106130"
+            },
+            {
+              "impact": "MEDIUM",
+              "type": "Missing X-Content-Type-Options",
+              "description": "X-Content-Type-Options header not set",
+              "status": "open",
+              "reported_at": "2026-01-16T17:06:58.106135"
+            },
+            {
+              "impact": "MEDIUM",
+              "type": "Missing X-XSS-Protection",
+              "description": "X-XSS-Protection header not set",
+              "status": "open",
+              "reported_at": "2026-01-16T17:06:58.106139"
+            },
+            {
+              "impact": "MEDIUM",
+              "type": "Missing Referrer-Policy",
+              "description": "Referrer-Policy header not set",
+              "status": "open",
+              "reported_at": "2026-01-16T17:06:58.106142"
+            },
+            {
+              "impact": "LOW",
+              "type": "Missing Permissions-Policy",
+              "description": "Permissions-Policy header not set",
+              "status": "open",
+              "reported_at": "2026-01-16T17:06:58.106146"
+            },
+            {
+              "impact": "LOW",
+              "type": "Server Disclosure",
+              "description": "nginx/1.29.4",
+              "status": "open",
+              "reported_at": "2026-01-16T17:06:58.106149"
+            }
+          ],
+          "issue_count": 8,
+          "owasp_aligned": true
+        }
+      }
+    },
+    "https://agenticlabel.apexneural.cloud/": {
+      "url": "https://agenticlabel.apexneural.cloud/",
+      "scans": {
+        "quick": {
+          "scan_time": "2026-01-16T17:06:58.364824",
+          "issues": [
+            {
+              "impact": "HIGH",
+              "type": "Missing Content-Security-Policy",
+              "description": "Content-Security-Policy header not set",
+              "status": "open",
+              "reported_at": "2026-01-16T17:06:58.364837"
+            },
+            {
+              "impact": "HIGH",
+              "type": "Missing Strict-Transport-Security",
+              "description": "Strict-Transport-Security header not set",
+              "status": "open",
+              "reported_at": "2026-01-16T17:06:58.364842"
+            },
+            {
+              "impact": "LOW",
+              "type": "Missing Permissions-Policy",
+              "description": "Permissions-Policy header not set",
+              "status": "open",
+              "reported_at": "2026-01-16T17:06:58.364844"
+            },
+            {
+              "impact": "LOW",
+              "type": "Server Disclosure",
+              "description": "nginx",
+              "status": "open",
+              "reported_at": "2026-01-16T17:06:58.364847"
+            }
+          ],
+          "issue_count": 4,
+          "owasp_aligned": true
+        }
+      }
+    }
+  }
+}
