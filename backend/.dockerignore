@@ -80,6 +80,7 @@ status_page.html
 
 # Scripts and temp files
 *.sh
+!docker-entrypoint.sh
 *.txt
 !requirements.txt
 websites.txt
