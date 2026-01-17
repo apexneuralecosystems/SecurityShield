@@ -10,13 +10,10 @@ security/
 ├── backend/
 │   ├── Dockerfile             # Backend multi-stage build
 │   └── .dockerignore          # Backend ignore patterns
-├── frontend/
-│   ├── Dockerfile             # Frontend multi-stage build
-│   └── .dockerignore          # Frontend ignore patterns
-└── nginx/
-    ├── nginx.conf             # Main Nginx configuration
-    └── conf.d/
-        └── default.conf       # Server block configuration
+└── frontend/
+    ├── Dockerfile             # Frontend multi-stage build with Nginx
+    ├── nginx.conf             # Nginx configuration (serves static + proxies API)
+    └── .dockerignore          # Frontend ignore patterns
 ```
 
 ## 🚀 Quick Start
@@ -79,12 +76,8 @@ The setup includes 4 main services:
 
 ### 3. **React Frontend** (`frontend`)
 - Multi-stage build with Node.js builder
-- Nginx Alpine for serving static files
+- Integrated Nginx Alpine for serving static files and proxying API
 - SPA routing support
-- Port: 80 (internal) / 3000 (external)
-
-### 4. **Nginx Reverse Proxy** (`nginx`)
-- Reverse proxy for API and frontend
 - Security headers configured
 - Rate limiting
 - Gzip compression
@@ -111,10 +104,8 @@ You can override default ports via environment variables:
 
 ```bash
 # In .env or docker-compose.override.yml
-NGINX_HTTP_PORT=80
-NGINX_HTTPS_PORT=443
+FRONTEND_PORT=80
 API_PORT=8000
-FRONTEND_PORT=3000
 POSTGRES_PORT=5432
 ```
 
@@ -122,14 +113,14 @@ POSTGRES_PORT=5432
 
 ### Nginx Security Headers
 
-The Nginx configuration includes:
+The frontend's integrated Nginx configuration includes:
 - **Content Security Policy (CSP)**
 - **X-Frame-Options**: Prevents clickjacking
 - **X-Content-Type-Options**: Prevents MIME sniffing
 - **X-XSS-Protection**: Legacy XSS protection
 - **Referrer-Policy**: Controls referrer information
 - **Permissions-Policy**: Restricts browser features
-- **HSTS**: HTTP Strict Transport Security (uncomment for HTTPS)
+- **HSTS**: HTTP Strict Transport Security (can be added for HTTPS)
 
 ### Rate Limiting
 
@@ -149,14 +140,13 @@ The Nginx configuration includes:
 ### 1. Enable HTTPS
 
 1. Obtain SSL certificates (Let's Encrypt, etc.)
-2. Mount certificates in `docker-compose.yml`:
-   ```yaml
-   nginx:
-     volumes:
-       - ./ssl:/etc/nginx/ssl:ro
+2. Place certificates in `frontend/ssl/` directory
+3. Update `frontend/Dockerfile` to copy SSL certificates:
+   ```dockerfile
+   COPY ssl/ /etc/nginx/ssl/
    ```
-3. Uncomment HTTPS server block in `nginx/conf.d/default.conf`
-4. Update `COOKIE_SECURE=true` in environment
+4. Add HTTPS server block to `frontend/nginx.conf`
+5. Update `COOKIE_SECURE=true` in environment
 
 ### 2. Database Backup
 
@@ -177,7 +167,7 @@ docker-compose ps
 
 # View logs
 docker-compose logs api
-docker-compose logs nginx
+docker-compose logs frontend
 ```
 
 ## 🛠️ Common Commands
@@ -198,7 +188,7 @@ docker-compose up -d api
 
 # View logs
 docker-compose logs -f api
-docker-compose logs -f nginx
+docker-compose logs -f frontend
 
 # Execute commands in container
 docker-compose exec api alembic upgrade head
@@ -236,17 +226,17 @@ docker-compose exec api alembic current
 docker-compose exec api alembic upgrade head
 ```
 
-### Nginx Issues
+### Nginx Issues (Frontend Container)
 
 ```bash
 # Test Nginx configuration
-docker-compose exec nginx nginx -t
+docker-compose exec frontend nginx -t
 
 # Reload Nginx
-docker-compose exec nginx nginx -s reload
+docker-compose exec frontend nginx -s reload
 
 # View access/error logs
-docker-compose logs nginx
+docker-compose logs frontend
 ```
 
 ### Frontend Build Issues
@@ -271,7 +261,7 @@ CMD ["sh", "-c", "alembic upgrade head && uvicorn app.main:app --host 0.0.0.0 --
 
 ### Nginx Caching
 
-Static assets are cached for 1 year. Adjust in `nginx/conf.d/default.conf` if needed.
+Static assets are cached for 1 year. Adjust in `frontend/nginx.conf` if needed.
 
 ### Database Connection Pool
 

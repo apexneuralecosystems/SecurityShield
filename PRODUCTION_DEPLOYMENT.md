@@ -127,8 +127,7 @@ Production configuration includes resource limits for all services:
 - **PostgreSQL**: 2GB RAM, 2 CPUs
 - **ZAP**: 4GB RAM, 4 CPUs
 - **API**: 2GB RAM, 2 CPUs
-- **Frontend**: 512MB RAM, 1 CPU
-- **Nginx**: 256MB RAM, 1 CPU
+- **Frontend (with integrated Nginx)**: 512MB RAM, 1 CPU
 
 Adjust in `docker-compose.prod.yml` if needed.
 
@@ -139,8 +138,7 @@ All services include health checks:
 - **PostgreSQL**: Checks database readiness
 - **ZAP**: Verifies ZAP API is responding
 - **API**: Checks `/health` endpoint
-- **Frontend**: Verifies Nginx is serving content
-- **Nginx**: Checks reverse proxy health
+- **Frontend**: Verifies Nginx is serving content and proxying API requests
 
 ### Logging
 
@@ -333,17 +331,30 @@ docker network prune
 
 ## SSL/HTTPS Setup
 
-### Using Nginx with SSL
+### Using Nginx with SSL (Frontend Container)
 
-1. Place SSL certificates in `./nginx/ssl/`:
+1. Place SSL certificates in `./frontend/ssl/`:
    - `cert.pem` (certificate)
    - `key.pem` (private key)
 
-2. Update Nginx configuration in `./nginx/conf.d/default.conf`
+2. Update Nginx configuration in `./frontend/nginx.conf` to add SSL server block:
+```nginx
+server {
+    listen 443 ssl http2;
+    ssl_certificate /etc/nginx/ssl/cert.pem;
+    ssl_certificate_key /etc/nginx/ssl/key.pem;
+    # ... rest of configuration
+}
+```
 
-3. Restart Nginx:
+3. Update `frontend/Dockerfile` to copy SSL certificates:
+```dockerfile
+COPY ssl/ /etc/nginx/ssl/
+```
+
+4. Restart frontend:
 ```bash
-docker-compose -f docker-compose.prod.yml restart nginx
+docker-compose -f docker-compose.prod.yml restart frontend
 ```
 
 ## Performance Optimization

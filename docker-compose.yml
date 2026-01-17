@@ -87,7 +87,7 @@ services:
       retries: 3
       start_period: 40s
 
-  # React Frontend
+  # React Frontend (with integrated Nginx)
   frontend:
     build:
       context: ./frontend
@@ -96,33 +96,8 @@ services:
         VITE_API_URL: ${VITE_API_URL:-http://localhost/api/v1}
     container_name: security_platform_frontend
     ports:
-      - "${FRONTEND_PORT:-3000}:80"
+      - "${FRONTEND_PORT:-80}:80"
     depends_on:
-      - api
-    networks:
-      - security_network
-    restart: unless-stopped
-    healthcheck:
-      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost/"]
-      interval: 30s
-      timeout: 3s
-      retries: 3
-      start_period: 5s
-
-  # Nginx Reverse Proxy
-  nginx:
-    image: nginx:alpine
-    container_name: security_platform_nginx
-    ports:
-      - "${NGINX_HTTP_PORT:-80}:80"
-      - "${NGINX_HTTPS_PORT:-443}:443"
-    volumes:
-      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
-      - ./nginx/conf.d:/etc/nginx/conf.d:ro
-      - nginx_logs:/var/log/nginx
-      - nginx_cache:/var/cache/nginx
-    depends_on:
-      - frontend
       - api
     networks:
       - security_network
@@ -132,7 +107,7 @@ services:
       interval: 30s
       timeout: 3s
       retries: 3
-      start_period: 10s
+      start_period: 5s
 
 networks:
   security_network:
@@ -140,9 +115,5 @@ networks:
 
 volumes:
   postgres_data:
-    driver: local
-  nginx_logs:
-    driver: local
-  nginx_cache:
     driver: local
 

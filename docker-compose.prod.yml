@@ -139,7 +139,7 @@ services:
     # No volumes in production - code is baked into image
     # Remove any volume mounts for production
 
-  # React Frontend
+  # React Frontend (with integrated Nginx)
   frontend:
     build:
       context: ./frontend
@@ -155,7 +155,7 @@ services:
       - security_network
     restart: unless-stopped
     healthcheck:
-      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost/"]
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost/health"]
       interval: 30s
       timeout: 3s
       retries: 3
@@ -174,45 +174,6 @@ services:
         max-size: "10m"
         max-file: "3"
 
-  # Nginx Reverse Proxy (Optional - for production with SSL)
-  nginx:
-    image: nginx:alpine
-    container_name: security_platform_nginx_prod
-    ports:
-      - "${NGINX_HTTP_PORT:-80}:80"
-      - "${NGINX_HTTPS_PORT:-443}:443"
-    volumes:
-      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
-      - ./nginx/conf.d:/etc/nginx/conf.d:ro
-      - ./nginx/ssl:/etc/nginx/ssl:ro
-      - nginx_logs:/var/log/nginx
-      - nginx_cache:/var/cache/nginx
-    depends_on:
-      - frontend
-      - api
-    networks:
-      - security_network
-    restart: unless-stopped
-    healthcheck:
-      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost/health"]
-      interval: 30s
-      timeout: 3s
-      retries: 3
-      start_period: 10s
-    deploy:
-      resources:
-        limits:
-          cpus: '1'
-          memory: 256M
-        reservations:
-          cpus: '0.25'
-          memory: 64M
-    logging:
-      driver: "json-file"
-      options:
-        max-size: "10m"
-        max-file: "3"
-
 networks:
   security_network:
     driver: bridge
@@ -222,9 +183,5 @@ networks:
 
 volumes:
   postgres_data:
-    driver: local
-  nginx_logs:
-    driver: local
-  nginx_cache:
     driver: local
 
